@@ -13,6 +13,9 @@
 		07C528EB256D76DB003DF08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C528E9256D76DB003DF08C /* Main.storyboard */; };
 		07C528ED256D76DB003DF08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C528EC256D76DB003DF08C /* Assets.xcassets */; };
 		07C528F0256D76DB003DF08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C528EE256D76DB003DF08C /* LaunchScreen.storyboard */; };
+		07FAFCD9256FF1F200D97BD3 /* Viagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAFCD8256FF1F200D97BD3 /* Viagem.swift */; };
+		07FAFCE0256FF51D00D97BD3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAFCDF256FF51D00D97BD3 /* TableViewCell.swift */; };
+		07FAFCEA256FFE4000D97BD3 /* ViagemDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FAFCE8256FFDF200D97BD3 /* ViagemDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		07C528EC256D76DB003DF08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C528EF256D76DB003DF08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		07C528F1256D76DB003DF08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07FAFCD8256FF1F200D97BD3 /* Viagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Viagem.swift; sourceTree = "<group>"; };
+		07FAFCDF256FF51D00D97BD3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		07FAFCE8256FFDF200D97BD3 /* ViagemDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViagemDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,56 @@
 			children = (
 				07C528E3256D76DB003DF08C /* AppDelegate.swift */,
 				07C528E5256D76DB003DF08C /* SceneDelegate.swift */,
-				07C528E7256D76DB003DF08C /* ViewController.swift */,
+				07FAFCE3256FFD9E00D97BD3 /* Model */,
+				07FAFCE4256FFDA900D97BD3 /* Home */,
+				07FAFCE7256FFDE300D97BD3 /* ViagemDAO */,
 				07C528E9256D76DB003DF08C /* Main.storyboard */,
 				07C528EC256D76DB003DF08C /* Assets.xcassets */,
 				07C528EE256D76DB003DF08C /* LaunchScreen.storyboard */,
 				07C528F1256D76DB003DF08C /* Info.plist */,
 			);
 			path = AluraViagens;
+			sourceTree = "<group>";
+		};
+		07FAFCE3256FFD9E00D97BD3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07FAFCD8256FF1F200D97BD3 /* Viagem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		07FAFCE4256FFDA900D97BD3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				07FAFCE6256FFDC300D97BD3 /* View */,
+				07FAFCE5256FFDB700D97BD3 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		07FAFCE5256FFDB700D97BD3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07C528E7256D76DB003DF08C /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		07FAFCE6256FFDC300D97BD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07FAFCDF256FF51D00D97BD3 /* TableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		07FAFCE7256FFDE300D97BD3 /* ViagemDAO */ = {
+			isa = PBXGroup;
+			children = (
+				07FAFCE8256FFDF200D97BD3 /* ViagemDAO.swift */,
+			);
+			path = ViagemDAO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +186,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FAFCD9256FF1F200D97BD3 /* Viagem.swift in Sources */,
 				07C528E8256D76DB003DF08C /* ViewController.swift in Sources */,
+				07FAFCE0256FF51D00D97BD3 /* TableViewCell.swift in Sources */,
+				07FAFCEA256FFE4000D97BD3 /* ViagemDAO.swift in Sources */,
 				07C528E4256D76DB003DF08C /* AppDelegate.swift in Sources */,
 				07C528E6256D76DB003DF08C /* SceneDelegate.swift in Sources */,
 			);
