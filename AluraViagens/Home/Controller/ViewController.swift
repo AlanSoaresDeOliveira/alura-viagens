@@ -23,6 +23,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.viewPacotes.layer.cornerRadius = 10
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+    
+    
+    
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         celula.labelTitulo.text = viagemAtual.titulo
         celula.labelQuantidadeDias.text = "\(viagemAtual.quantidadeDeDias) dias"
-        celula.labelPreco.text = viagemAtual.preco
+        celula.labelPreco.text = "R$ \(viagemAtual.preco)"
         celula.imagemViagem.image = UIImage(named: viagemAtual.caminhoDaImagem)
         
         celula.imagemViagem.layer.cornerRadius = 10
@@ -46,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone ? 175 : 260
     }
 
 
