@@ -15,7 +15,7 @@ class Viagem: NSObject {
     
     init(titulo: String, quantidadeDeDias: Int, preco: String, caminhoDaImagem: String) {
         self.titulo = titulo
-        self.quantidadeDeDias = quantidadeDeDias
+        self.quantidadeDeDias = quantidadeDeDias   
         self.preco = preco
         self.caminhoDaImagem = caminhoDaImagem
     }
