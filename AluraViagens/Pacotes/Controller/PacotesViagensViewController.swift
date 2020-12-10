@@ -37,14 +37,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         
         let pacoteAtual = listaViagens[indexPath.item]
         
-        celula.labelTitulo.text = pacoteAtual.viagem.titulo
-        celula.labelQuantidadeDias.text = "\(pacoteAtual.viagem.quantidadeDeDias) dias"
-        celula.labelPreco.text = "R$ \(pacoteAtual.viagem.preco)"
-        celula.imagemViagem.image = UIImage(named: pacoteAtual.viagem.caminhoDaImagem)
-        
-        celula.layer.borderWidth = 0.5
-        celula.layer.borderColor = UIColor(displayP3Red: 85.0/250.0, green: 85.0/250.0, blue: 85.0/250.0, alpha: 1).cgColor
-        celula.layer.cornerRadius = 8
+        celula.configuraCelula(pacote: pacoteAtual)       
         
         return celula
     }
@@ -58,7 +51,7 @@ class PacotesViagensViewController: UIViewController, UICollectionViewDataSource
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "detalhes") as! DetalhesViagensViewController
         controller.pacoteSelecionado = pacote
-        self.present(controller, animated: true, completion: nil)
+        self.navigationController?.pushViewController(controller, animated: true)
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

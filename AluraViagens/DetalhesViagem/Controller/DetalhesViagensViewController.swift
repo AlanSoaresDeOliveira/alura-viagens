@@ -17,6 +17,7 @@ class DetalhesViagensViewController: UIViewController {
     @IBOutlet weak var scrollPrincipal: UIScrollView!
     
     @IBOutlet weak var textFieldData: UITextField!
+    
     var pacoteSelecionado: PacoteViagem? = nil
     
     override func viewDidLoad() {
@@ -42,7 +43,7 @@ class DetalhesViagensViewController: UIViewController {
     }
     
     @IBAction func botaoVoltar(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func textFieldEntrouFoco(_ sender: UITextField) {
@@ -50,6 +51,13 @@ class DetalhesViagensViewController: UIViewController {
         dataPickerView.datePickerMode = .date
         sender.inputView = dataPickerView
         dataPickerView.addTarget(self, action: #selector(exibeDataTextField(sender:)), for: .valueChanged)
+        
+    }
+    @IBAction func botaoFinalizarCompra(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "confirmacaoPagamento") as! ConfirmacaoPagamentoViewController
+        controller.pacoteComprado = pacoteSelecionado
+        self.navigationController?.pushViewController(controller, animated: true)
         
     }
 }
