@@ -11,8 +11,8 @@ class ConfirmacaoPagamentoViewController: UIViewController {
 
     @IBOutlet weak var imagemPacoteViagem: UIImageView!
     
-    @IBOutlet weak var labelHotelPacoteViagem: UILabel!
     @IBOutlet weak var labelTituloPacoteViagem: UILabel!
+    @IBOutlet weak var labelHotelPacoteViagem: UILabel!
     @IBOutlet weak var labelDataPacoteViagem: UILabel!
     @IBOutlet weak var labelQuantidadePessoas: UILabel!
     @IBOutlet weak var labelDescricaoPacoteViagem: UILabel!
